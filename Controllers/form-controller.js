@@ -1,13 +1,15 @@
 import sequelize from '../db/db.js';
 import { sendemail } from '../email/email.js';
 import Userdetail from '../models/user-from.js';
-import validatePhoneNumber from 'validate-phone-number-node-js';
+import fetch from "node-fetch";
+
 export const form = async (req, response) => {
   var email = req.body.email;
   var mobile = req.body.mobileNumber;
   var countrycode = req.body.countrycode;
   var phonenumber = countrycode + mobile;
-  var myHeaders = new Headers();
+  // var myHeaders = new Headers();
+  var myHeaders = new fetch.Headers();
   myHeaders.append("apikey", "9CxUWGheancBin3835yzTIIUPilUiNhN");
   var requestOptions = {
     method: 'GET',
