@@ -1,9 +1,9 @@
 
 import Sequelize from "sequelize";
 const sequelize = new Sequelize(
-    'railway',
-    'root',
-    'IpIPoMyxHg62QxHYgCb2',
+    'railway', //db name
+    'root',// username 
+    'IpIPoMyxHg62QxHYgCb2', //pwd
      {
        host: 'containers-us-west-164.railway.app',
        dialect: 'mysql',
