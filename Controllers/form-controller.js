@@ -4,7 +4,11 @@ import Userdetail from '../models/user-from.js';
 import fetch from "node-fetch";
 
 export const form = async (req, response) => {
-  var email = req.body.email;
+  
+
+  try {
+
+    var email = req.body.email;
   var mobile = req.body.mobileNumber;
   var countrycode = req.body.countrycode;
   var phonenumber = countrycode + mobile;
@@ -48,10 +52,6 @@ export const form = async (req, response) => {
       }
     })
     .catch(error => console.log('error', error));
-
-  try {
-
-    
 
   
  
