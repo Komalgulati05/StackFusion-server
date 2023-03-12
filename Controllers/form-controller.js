@@ -36,7 +36,7 @@ export const form = async (req, response) => {
             email: email,
             PhoneNo: phonenumber
           }).then(res => {
-            // console.log(res);
+          
             sendemail(email);
             response.status(200).send("Success");
           }).catch((error) => {
