@@ -9,12 +9,14 @@ export const form = async (req, response) => {
   var countrycode = req.body.countrycode;
   var phonenumber = countrycode + mobile;
   // var myHeaders = new Headers();
-  var myHeaders = new fetch.Headers();
-  myHeaders.append("apikey", "9CxUWGheancBin3835yzTIIUPilUiNhN");
+  // var myHeaders = new fetch.Headers();
+  // myHeaders.append("apikey", "9CxUWGheancBin3835yzTIIUPilUiNhN");
   var requestOptions = {
     method: 'GET',
     redirect: 'follow',
-    headers: myHeaders
+    headers: {
+      "apikey":"9CxUWGheancBin3835yzTIIUPilUiNhN"
+    }
   };
   
   const result= fetch("https://api.apilayer.com/number_verification/validate?number="+phonenumber, requestOptions)
